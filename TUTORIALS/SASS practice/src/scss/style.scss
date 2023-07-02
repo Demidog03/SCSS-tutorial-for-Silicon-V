@@ -1,0 +1,42 @@
+@import "normalize.scss";
+
+body {
+  background-color: green;
+}
+
+$color1: rgb(255, 174, 0);
+$color2: red;
+$font10: 60px;
+$font9: 47px;
+
+.wrapper {
+  display: none;
+  background-color: $color1;
+  h1 {
+    font-size: $font9;
+    font-weight: bold;
+    span {
+      color: $color2;
+      &:hover {
+        color: floralwhite;
+      }
+    }
+    &:hover {
+      color: floralwhite;
+    }
+  }
+  p {
+    font-size: 20px;
+    color: $color2;
+  }
+  &.active {
+    display: block;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "page1.scss";
+@import "page2.scss";

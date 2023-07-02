@@ -1,0 +1,57 @@
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr; /*Fractions*/
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 900px minmax(100px, 200px) 500px; /*minmax*/ /*1em = 16px*/
+    grid-template-columns: repeat(3, 1fr); /*repeat()*/
+    grid-template-columns: [line-first] 1fr [line-second] 1fr [line-third] 1fr [line-last]; /*named lines*/
+    grid-template-columns: [main-start] 1fr [main-end] 1fr [sidebar-start] 1fr [sidebar-end]; /*named lines*/
+}
+
+.grid-wrapper div{
+    width: 100%;
+    height: 200px;
+}
+
+.grid-item1{
+    background-color: red;
+    grid-column: 1/4;
+    grid-column: line-second/line-last;
+    grid-column: sidebar;
+    /*!*named lines*!*/
+    /*grid-column: main-start/sidebar-end;*/
+    /*grid-column: main/sidebar;*/
+    /*grid-column: main;*/
+    /*grid-row: 1/2;*/
+}
+.grid-item2{
+    background-color: yellow;
+}
+.grid-item3{
+    background-color: teal;
+    /*grid-column: 2 span;*/
+    /*grid-row: 2/3;*/
+}
+.grid-item4{
+    background-color: forestgreen;
+    /*grid-row: 3; !*extendable*!*/
+}
+
+.text{
+    font-size: 28px;
+}
+
+.text p{
+    font-size: 32px;
+    font-size: 2rem; /*1rem = 24px*/ /*font-side: 48px*/
+    font-size: 2em; /*1em = 28px*/ /*font-size: 52px*/
+}
+
+/*button{*/
+/*    font-size: 30px;*/
+/*}*/
+
+/*button{*/
+/*    padding: 1em;*/
+/*}*/

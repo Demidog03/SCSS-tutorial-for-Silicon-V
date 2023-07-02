@@ -1,0 +1,104 @@
+/*.wrapper{*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    grid-template-rows: minmax(100px, auto) repeat(3, minmax(200px, auto)) minmax(300px, auto);*/
+/*    grid-template-areas:*/
+/*        "header header header"*/
+/*        "sidebar main main"*/
+/*        "sidebar main main"*/
+/*        "sidebar main main"*/
+/*        "footer footer footer"*/
+/*    ;        !*Create empty area with ".":   "sidebar . main"*!*/
+/*}*/
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px, auto) repeat(3, minmax(200px, auto)) minmax(300px, auto);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "sidebar main main"
+        "sidebar main main"
+        "footer footer footer"
+    ;
+}
+
+.wrapper div{
+    /*height: 200px;*/
+}
+.header{
+    background-color: #21759b;
+    grid-area: header;
+}
+.main-content{
+    background-color: #9b2183;
+    grid-area: main;
+    display: inherit;
+    align-content: center;
+    justify-content: center;
+}
+.sidebar{
+    background-color: #434638;
+    grid-area: sidebar;
+}
+.footer{
+    background-color: #6a9b21;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(100px, auto) minmax(150px, auto) repeat(3, minmax(200px, auto)) minmax(300px, auto);
+        grid-template-areas:
+        "header header"
+        "sidebar sidebar"
+        "main main"
+        "main main"
+        "main main"
+        "footer footer"
+    ;
+    }
+}
+
+/*.wrapper div{*/
+/*    width: 100%;*/
+/*    color: white;*/
+/*    font-size: 1.2rem;*/
+/*    display: grid;*/
+/*    place-items: center;*/
+/*}*/
+
+/*.header{*/
+/*    background-color: red;*/
+/*    grid-area: header;*/
+/*}*/
+/*.main-content{*/
+/*    background-color: yellow;*/
+/*    grid-area: main;*/
+/*}*/
+/*.sidebar{*/
+/*    background-color: teal;*/
+/*    grid-area: sidebar;*/
+/*}*/
+/*.footer{*/
+/*    background-color: forestgreen;*/
+/*    grid-area: footer;*/
+/*}*/
+
+/*@media screen and (max-width: 760px){*/
+/*    .wrapper{*/
+/*        grid-template-columns: repeat(2, 1fr);*/
+/*        grid-template-rows: minmax(100px, auto) repeat(4, minmax(200px, auto)) minmax(300px, auto);*/
+/*        grid-template-areas:*/
+/*            "header header"*/
+/*            "sidebar sidebar"*/
+/*            "main main"*/
+/*            "main main"*/
+/*            "main main"*/
+/*            "footer footer"*/
+/*        ;*/
+/*    }*/
+/*}*/
